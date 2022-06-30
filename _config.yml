@@ -1,0 +1,8 @@
+# https://jekyllrb.com/docs/configuration/options/
+
+source: src
+destination: docs
+safe: true
+exclude: []
+keep_files:
+- index.html
