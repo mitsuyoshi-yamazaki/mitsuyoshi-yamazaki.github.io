@@ -23,14 +23,15 @@ jobs:
           hugo-version: 'latest'
           # extended: true
 
+      - name: Change Working Directory
+        run: cd docs/
+
       - name: Build
         run: hugo --minify
-        working-directory: ./docs
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         if: github.ref == 'refs/heads/add-deploy-action'
-        working-directory: ./docs
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
