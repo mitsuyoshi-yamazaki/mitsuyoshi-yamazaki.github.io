@@ -33,4 +33,4 @@ jobs:
         if: github.ref == 'refs/heads/master'
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./docs/public
+          publish_dir: ./docs/public # この設定により /docs/public 以下の内容が gh-pages ブランチの *ルートに* 展開される。回避法が不明なため GitHub Pages 側でルートを公開する必要がある
