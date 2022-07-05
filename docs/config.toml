@@ -1,4 +1,4 @@
-baseURL = 'http://example.org/'
+relativeURLs = true
 languageCode = 'en-us'
 title = 'My New Hugo Site'
 theme = "paper"
