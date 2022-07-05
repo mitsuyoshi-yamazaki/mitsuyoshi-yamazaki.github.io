@@ -1,1 +1,1 @@
-# blog
+https://mitsuyoshi-yamazaki.github.io
