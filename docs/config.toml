@@ -3,6 +3,8 @@ languageCode = 'en-us'
 title = 'My New Hugo Site'
 theme = "paper"
 
+googleAnalytics = "G-3EB73WSJ9K"
+
 [[menu.posts]]
 identifier = "posts"
 name = "posts"
