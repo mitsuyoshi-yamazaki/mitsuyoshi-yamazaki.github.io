@@ -1,0 +1,3 @@
+[submodule "docs/my-doks-site"]
+	path = docs/my-doks-site
+	url = https://github.com/h-enk/doks-child-theme.git
