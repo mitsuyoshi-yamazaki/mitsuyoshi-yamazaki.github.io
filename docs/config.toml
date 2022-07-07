@@ -1,6 +1,6 @@
-relativeURLs = true
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+baseURL = "https://mitsuyoshi-yamazaki.github.io"
+languageCode = "ja-jp"
+title = "みつよし手稿"
 theme = "paper"
 
 googleAnalytics = "G-3EB73WSJ9K"
