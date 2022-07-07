@@ -10,3 +10,8 @@ identifier = "posts"
 name = "posts"
 url = "/posts/"
 weight = 10
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      hardWraps = true # 改行を改行と認識する
