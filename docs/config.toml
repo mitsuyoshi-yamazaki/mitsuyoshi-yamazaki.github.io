@@ -6,12 +6,25 @@ theme = "paper"
 googleAnalytics = "G-3EB73WSJ9K"
 
 [[menu.posts]]
-identifier = "posts"
-name = "posts"
-url = "/posts/"
-weight = 10
+  identifier = "posts"
+  name = "posts"
+  url = "/posts/"
+  weight = 10
 
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
       hardWraps = true # 改行を改行と認識する
+
+[params] # themeの設定
+  # PaperMod
+  [params.homeInfoParams]
+    Title = "みつよし手稿"
+#    Content = "Can be Info, links, about..." # TODO:
+
+  [[params.socialIcons]]
+    name = "Twitter"
+    url = "https://twitter.com/vespid"
+  [[params.socialIcons]]
+    name = "GitHub"
+    url = "https://github.com/mitsuyoshi-yamazaki"
