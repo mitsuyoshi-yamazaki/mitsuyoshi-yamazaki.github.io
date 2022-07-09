@@ -1,3 +1,5 @@
+# Documentation: https://gohugo.io/getting-started/configuration/
+
 baseURL = "https://mitsuyoshi-yamazaki.github.io"
 languageCode = "ja-jp"
 title = "みつよし手稿"
@@ -5,13 +7,80 @@ theme = "paper"
 
 googleAnalytics = "G-3EB73WSJ9K"
 
-[[menu.posts]]
-identifier = "posts"
-name = "posts"
-url = "/posts/"
-weight = 10
 
+# ---- Site Settings ---- #
+[menu]
+  [[menu.main]]
+    name = "検索"
+    url = "search/"
+    weight = 10
+  [[menu.posts]]  # FixMe: このメニューどこにある？
+    identifier = "posts"
+    name = "Posts"
+    url = "posts/"
+    weight = 10
+
+
+# ---- Markup ---- #
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
       hardWraps = true # 改行を改行と認識する
+
+
+# ---- In Site Search ---- #
+# https://github.com/adityatelange/hugo-PaperMod/wiki/Features#search-page
+[outputs]
+  home = [
+    "HTML", 
+    "RSS",
+    "JSON"  # is necessary
+    ]
+
+
+# ---- Theme Settings ---- #
+[params]
+  # PaperMod
+  [params.homeInfoParams]
+    title = "みつよし手稿"
+#    content = "Can be Info, links, about..." # TODO:
+
+  [[params.socialIcons]]
+    name = "Twitter"
+    url = "https://twitter.com/vespid"
+  [[params.socialIcons]]
+    name = "GitHub"
+    url = "https://github.com/mitsuyoshi-yamazaki"
+
+  [params.fuseOpts] # 検索
+    isCaseSensitive = false
+    shouldSort = true
+    location = 0
+    distance = 1000
+    threshold = 0.4
+    minMatchCharLength = 0
+    keys = ["title", "permalink", "summary", "content"]
+
+
+# ---- Language ---- #
+# https://gohugo.io/content-management/multilingual/#configure-languages
+defaultContentLanguage = "ja-jp"
+[languages]
+  [languages.ja-jp]
+    # デフォルト設定と同一の値は省略
+    languageName = "日本語"
+  [languages.en]
+    languageName = "English"
+    title = "Mitsuyoshi's Manuscript"
+    [languages.en.params.homeInfoParams]
+      title = "Mitsuyoshi's Manuscript"
+    [languages.en.menu]
+      [[languages.en.menu.main]]
+        name = "Search"
+        url = "search/"
+        weight = 10
+      [[languages.en.menu.posts]]
+        identifier = "posts"
+        name = "Posts"
+        url = "posts/"
+        weight = 10
