@@ -12,6 +12,10 @@ jobs:
   deploy:
     runs-on: ubuntu-20.04
     steps:
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.6.5' # ローカルではpyenvを使っています。多重管理ごめんなさい
+
       - uses: actions/checkout@v2
         with:
           submodules: true  # Fetch Hugo themes (true OR recursive)
@@ -26,6 +30,7 @@ jobs:
       - name: Build
         run: |
           cd docs/
+          python ../scripts/create_multilingual_contents.py
           hugo --minify
 
       - name: Deploy
@@ -34,3 +39,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./docs/public # この設定により /docs/public 以下の内容が gh-pages ブランチの *ルートに* 展開される。回避法が不明なため GitHub Pages 側でルートを公開する必要がある
+
+# for using Python in workflow, see following links: 
+# - https://docs.github.com/actions/automating-builds-and-tests/building-and-testing-python#using-the-python-starter-workflow
+# - https://github.com/actions/setup-python
