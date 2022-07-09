@@ -19,17 +19,31 @@ defaultContentLanguage = "ja-jp"
       title = "Mitsuyoshi's Manuscript"
 
 # ---- Site Settings ---- #
-[[menu.posts]]
-  identifier = "posts"
-  name = "posts"
-  url = "/posts/"
-  weight = 10
+[menu]
+  [[menu.main]]
+    name = "検索"
+    url = "search/"
+    weight = 10
+  [[menu.posts]]
+    identifier = "posts"
+    name = "posts"
+    url = "/posts/"
+    weight = 10
 
 # ---- Markup ---- #
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
       hardWraps = true # 改行を改行と認識する
+
+# ---- In Site Search ---- #
+# https://github.com/adityatelange/hugo-PaperMod/wiki/Features#search-page
+[outputs]
+  home = [
+    "HTML", 
+    "RSS",
+    "JSON"  # is necessary
+    ]
 
 # ---- Theme Settings ---- #
 [params]
@@ -44,3 +58,12 @@ defaultContentLanguage = "ja-jp"
   [[params.socialIcons]]
     name = "GitHub"
     url = "https://github.com/mitsuyoshi-yamazaki"
+
+  [params.fuseOpts] # 検索
+    isCaseSensitive = false
+    shouldSort = true
+    location = 0
+    distance = 1000
+    threshold = 0.4
+    minMatchCharLength = 0
+    keys = ["title", "permalink", "summary", "content"]
