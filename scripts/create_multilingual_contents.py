@@ -51,4 +51,4 @@ def create_multilingual_contents(directory_path):
 
 if __name__ == "__main__":    
   results = create_multilingual_contents(content_root_path)
-  print("{0} multilingual content file created.\n{1}".format(len(results), "\n".join(results)))
+  print("Created {0} multilingual content files:\n{1}".format(len(results), "\n".join(results)))
