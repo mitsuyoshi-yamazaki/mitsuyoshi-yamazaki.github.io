@@ -2,7 +2,7 @@
 定期的に話題に上る「蛹の起源」について。
 ２大学説（「蛹＝終齢幼虫」vs「蛹＝全幼虫齢」）についてレビューし、変態制御遺伝子群の機能からも検討。
 https://twitter.com/Cyclommatism/status/1545369213212463105?s=20&amp;amp;t=SkllRtNcehkcRyMvwd1GyA
-Weight Agnostic Neural Networks Newral netの接続トポロジーのみを進化的計算で求め、学習（結合荷重の最適化）を省略することで高速に計算する手法
+Weight Agnostic Neural Networks Neural netの接続トポロジーのみを進化的計算で求め、学習（結合荷重の最適化）を省略することで高速に計算する手法
 https://weightagnostic.github.io
 われわれががんばって学習させていたのは一体…？
 学習ありの場合の進化計算よりは時間かかる（要するに結合加重込みのトポロジーの最適解を求めているので）と思うのだけどどうなんじゃろ</description></item><item><title>このサイトについて</title><link>https://mitsuyoshi-yamazaki.github.io/posts/2022-07-07-155059.470834/</link><pubDate>Thu, 07 Jul 2022 15:50:59 +0900</pubDate><guid>https://mitsuyoshi-yamazaki.github.io/posts/2022-07-07-155059.470834/</guid><description>自分の思索やらを記録しておきたいという要望が以前からあり、今までは物理のノートやTwitter, note, Zennや社内wikiなどに書いていたが、
