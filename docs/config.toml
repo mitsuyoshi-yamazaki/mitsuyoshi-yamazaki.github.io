@@ -3,6 +3,7 @@
 baseURL = "https://mitsuyoshi-yamazaki.github.io"
 languageCode = "ja-jp"
 title = "みつよし手稿"
+description = ""
 theme = "paper"
 
 googleAnalytics = "G-3EB73WSJ9K"
@@ -74,6 +75,7 @@ defaultContentLanguage = "ja-jp"
     languageName = "English"
     weight = 2
     title = "Mitsuyoshi's Manuscript"
+    description = ""
     [languages.en.params.homeInfoParams]
       title = "Mitsuyoshi's Manuscript"
     [languages.en.menu]
