@@ -7,16 +7,6 @@ theme = "paper"
 
 googleAnalytics = "G-3EB73WSJ9K"
 
-# ---- Language ---- #
-# https://gohugo.io/content-management/multilingual/#configure-languages
-defaultContentLanguage = "ja-jp"
-[languages]
-  [languages.ja-jp]
-    # デフォルト言語なので空
-  [languages.en]
-    title = "Mitsuyoshi's Manuscript"
-    [languages.en.params.homeInfoParams]
-      title = "Mitsuyoshi's Manuscript"
 
 # ---- Site Settings ---- #
 [menu]
@@ -24,17 +14,19 @@ defaultContentLanguage = "ja-jp"
     name = "検索"
     url = "search/"
     weight = 10
-  [[menu.posts]]
+  [[menu.posts]]  # FixMe: このメニューどこにある？
     identifier = "posts"
-    name = "posts"
-    url = "/posts/"
+    name = "Posts"
+    url = "posts/"
     weight = 10
+
 
 # ---- Markup ---- #
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
       hardWraps = true # 改行を改行と認識する
+
 
 # ---- In Site Search ---- #
 # https://github.com/adityatelange/hugo-PaperMod/wiki/Features#search-page
@@ -44,6 +36,7 @@ defaultContentLanguage = "ja-jp"
     "RSS",
     "JSON"  # is necessary
     ]
+
 
 # ---- Theme Settings ---- #
 [params]
@@ -67,3 +60,27 @@ defaultContentLanguage = "ja-jp"
     threshold = 0.4
     minMatchCharLength = 0
     keys = ["title", "permalink", "summary", "content"]
+
+
+# ---- Language ---- #
+# https://gohugo.io/content-management/multilingual/#configure-languages
+defaultContentLanguage = "ja-jp"
+[languages]
+  [languages.ja-jp]
+    # デフォルト設定と同一の値は省略
+    languageName = "日本語"
+  [languages.en]
+    languageName = "English"
+    title = "Mitsuyoshi's Manuscript"
+    [languages.en.params.homeInfoParams]
+      title = "Mitsuyoshi's Manuscript"
+    [languages.en.menu]
+      [[languages.en.menu.main]]
+        name = "Search"
+        url = "search/"
+        weight = 10
+      [[languages.en.menu.posts]]
+        identifier = "posts"
+        name = "Posts"
+        url = "posts/"
+        weight = 10
