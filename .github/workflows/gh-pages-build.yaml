@@ -14,7 +14,7 @@ jobs:
     steps:
       - uses: actions/setup-python@v4
         with:
-          python-version: '3.6.5' # ローカルではpyenvを使っています。多重管理ごめんなさい
+          python-version: '3.6.7' # ローカルではpyenvを使っています。多重管理ごめんなさい
 
       - uses: actions/checkout@v2
         with:
