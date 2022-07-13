@@ -80,7 +80,7 @@ class EnglishTranslator(Translator):
     self.translating_comment = "*This article is automatically generated from the original content*"
 
   def translate(self, line: str) -> str:
-    return line # TODO:
+    return line # TODO: not implemented yet
     # return " [{0}] {1}".format(language.value, line) if len(line) > 0 else ""  # TODO:
 
 def get_translator(language: Language) -> Translator:
