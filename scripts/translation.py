@@ -10,7 +10,7 @@ markdown_ignore_lines = [
   "---",
 ]
 
-hugo_control_header_pattern = "^\n*---\n(\n|.)*\n---\n"
+hugo_control_header_pattern = "^\n*---\n(\n|.)*?\n---\n"
 
 # 前方からチェックされるため-,#など他のパターンに含まれるパターンは後ろに置く
 markdown_prefix_pattern = "^(>|\s*(#####|####|###|##|#|- \[ \]|- \[x\]|-|\d+\.))"
