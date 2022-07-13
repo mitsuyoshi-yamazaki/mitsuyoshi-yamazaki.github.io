@@ -59,6 +59,10 @@ class MarkdownParser:
     parsed = split_contents()
     self.hugo_control_header = parsed[0]
     self.lines = [MarkdownLine(line) for line in parsed[1].split("\n")]
+    for line in self.lines:
+      log("--")
+      log("prefix: {}".format(line.prefix or '""'))
+      log("content: {}".format(line.content or '""'))
 
 class Translator:
   language: Language
@@ -91,19 +95,13 @@ def translate(contents: str, language: Language) -> str:
   markdown_parser = MarkdownParser(contents)
   translator = get_translator(language)
 
-  def translate_line(line: MarkdownLine) -> str:
-    result = line.prefix + translator.translate(line.content)
-    if line.raw_content:
-      log("{0}=={1}\n{2}\n".format(line.prefix, line.content, result))
-    return result
-
   translated_contents = [
   ]
   if markdown_parser.hugo_control_header is not None:
     translated_contents.append(markdown_parser.hugo_control_header)
   if translator.translating_comment is not None:
     translated_contents.append(translator.translating_comment)
-  translated_contents.extend([translate_line(line) for line in markdown_parser.lines])
+  translated_contents.extend([line.prefix + translator.translate(line.content) for line in markdown_parser.lines])
   
   return "\n".join(translated_contents)
 
