@@ -44,7 +44,17 @@ googleAnalytics = "G-3EB73WSJ9K"
   # PaperMod
   [params.homeInfoParams]
     title = "みつよし手稿"
-#    content = "Can be Info, links, about..." # TODO:
+    content = """
+ものづくりと観察が好きです
+
+---
+製作物
+・人工生命をベースとしたジェネラティブアート: [Gallery - ALifeLab](https://mitsuyoshi-yamazaki.github.io/ALifeLab/pages/gallery.html)
+・人工生命分野関連のweb新聞: [ALife Newsletter](https://alife.org/category/newsletter/)
+・外部リンク：
+　・[note](https://note.com/_mitsuyoshi)
+　・[Zenn](https://zenn.dev/mitsuyoshi)
+    """
 
   [[params.socialIcons]]
     name = "Twitter"
@@ -78,6 +88,18 @@ defaultContentLanguage = "ja-jp"
     description = ""
     [languages.en.params.homeInfoParams]
       title = "Mitsuyoshi's Manuscript"
+      content = """
+I love emergence
+
+---
+What I made:
+・Artificial life based generative arts: [Gallery - ALifeLab](https://mitsuyoshi-yamazaki.github.io/ALifeLab/pages/gallery.html)
+・web newsletter on Artificial life field: [ALife Newsletter](https://alife.org/category/newsletter/)
+・other links：
+　・[note](https://note.com/_mitsuyoshi)
+　・[Zenn](https://zenn.dev/mitsuyoshi)
+    """
+
     [languages.en.menu]
       [[languages.en.menu.main]]
         name = "Search"
