@@ -1,4 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>みつよし手稿</title><link>https://mitsuyoshi-yamazaki.github.io/ja-jp/</link><description>Recent content on みつよし手稿</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Mon, 18 Jul 2022 19:31:11 +0900</lastBuildDate><atom:link href="https://mitsuyoshi-yamazaki.github.io/ja-jp/index.xml" rel="self" type="application/rss+xml"/><item><title>ALIFE2022 Day1</title><link>https://mitsuyoshi-yamazaki.github.io/ja-jp/posts/2022-07-18-193111.491634/</link><pubDate>Mon, 18 Jul 2022 19:31:11 +0900</pubDate><guid>https://mitsuyoshi-yamazaki.github.io/ja-jp/posts/2022-07-18-193111.491634/</guid><description>今年はイタリアなのでCESTで時差は7時間
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>みつよし手稿</title><link>https://mitsuyoshi-yamazaki.github.io/ja-jp/</link><description>Recent content on みつよし手稿</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Tue, 19 Jul 2022 17:15:58 +0900</lastBuildDate><atom:link href="https://mitsuyoshi-yamazaki.github.io/ja-jp/index.xml" rel="self" type="application/rss+xml"/><item><title>ALIFE2022 Day2</title><link>https://mitsuyoshi-yamazaki.github.io/ja-jp/posts/2022-07-19-171558.333498/</link><pubDate>Tue, 19 Jul 2022 17:15:58 +0900</pubDate><guid>https://mitsuyoshi-yamazaki.github.io/ja-jp/posts/2022-07-19-171558.333498/</guid><description>アブストの載っているプログラムを翻訳したのち聞くようにしたら多少わかるようになった…か？わからん
+オーストラリアのソフトウェアエンジニアの参加者に、Tierraで個体長を大きくする淘汰圧はどう実装するかやオートエンコーダで創発が検出できるのではといった話を聞いた。聞き返せると6割くらいはわかる
+Empathic Active Inference: Active Inference with Empathy Mechanism for Socially Behaved Artificial Agent 共感の認知機能を実装することでエージェントに利他的なふるまいをさせることを可能にしたという発表
+そのようなエージェントも利己的な集団に突っ込むと利己的にふるまうようなので、単に他者の利益を評価してそのようにふるまっているわけではない
+Voluntary safety pledges overcome over-regulation dilemma in AI development: an evolutionary game analysis エージェントの行動を直接的に制限するのではなく、制約を設けることにより自発的にある行動を抑制するような仕組みを作ったという発表
+Simulations of Vesicular Distanglement 細胞の小胞体間の接続をどのように切り離すかシミュレーションで研究したという発表
+時間になっても発表者が現れなかったため昼休みになった。自由かよ
+泡状の物体をどう分裂させるかという話なのだったら気になっていたので後で見直したい
+泡のような形状を自律的につくる系をつくるのは簡単で、互いに接続しつつ体積あたりの表面積が最小になるような制約をかければすぐできる。
+一方でこれを分裂させようとするのはその制約に反するため難しい。
+より大きな制約をつくって、「今までの制約は大きな制約のひとつの側面でしかないんですよ、こういう条件では制約が緩くなりますよ」ということにするか、別の仕組みを導入して力技でなんとかするか、現実の生命はどうやっているんだろうね？
+Evolving Unbounded Neural Complexity in Pursuit-Evasion Games 共進化で個体の複雑さは増加する
+prior workに出ていた言語推測ゲームって立命館大学の谷口先生かな？
+Firefly-inspired vocabulary generator for communication in multi-agent systems 蛍が群れていると自分の点滅パターンが大勢に埋もれてしまい相手に届かないため、埋もれないような点滅パターンをどのように生成するかという発表
+Alternative Comfortの研究と似てるかな
+その他に気になった発表 Testing the Efficiency of a Genome-Wide Association Study on a Computational Evolutionary Model 手法として取り入れたALifeモデルが面白そうだった</description></item><item><title>ALIFE2022 Day1</title><link>https://mitsuyoshi-yamazaki.github.io/ja-jp/posts/2022-07-18-193111.491634/</link><pubDate>Mon, 18 Jul 2022 19:31:11 +0900</pubDate><guid>https://mitsuyoshi-yamazaki.github.io/ja-jp/posts/2022-07-18-193111.491634/</guid><description>今年はイタリアなのでCESTで時差は7時間
 全て英語なので事前にアブストを読んで話の流れを掴んでおかないとだいたいわからない
 The evolution of adaptive phenotypic plasticity stabilizes populations against environmental fluctuations Phenotypic plasticity:
 which is the capacity for a single genotype to produce alternate phenotypes depending on environmental conditions.
@@ -32,17 +47,17 @@ fluctuation: 変動
 perspectives on collective vitality
 0. Excitable media as a common property
 Kinetic energy / templature Susceptibility of a collective Network structure Tetrahymena
-水中の単細胞</description></item><item><title>このサイトについて</title><link>https://mitsuyoshi-yamazaki.github.io/ja-jp/posts/2022-07-07-155059.470834/</link><pubDate>Thu, 07 Jul 2022 15:50:59 +0900</pubDate><guid>https://mitsuyoshi-yamazaki.github.io/ja-jp/posts/2022-07-07-155059.470834/</guid><description>自分の思索やらを記録しておきたいという要望が以前からあり、今までは物理のノートやTwitter, note, Zennや社内wikiなどに書いていたが、
-データが手元に残らないため失われる可能性がある 一元管理できない 内容を機械処理（翻訳、言語解析等）にかけるのが面倒 relationalな内容をそのように管理/取り扱いすることができない という問題があった。
-relationalな内容の管理とは、アイデアや思想はその周辺のアイデアとのつながりがあってこそ活きるので、人間の頭の中で起きているような連想を行える何者かのこと。
-要件 このサイトのコンセプトはそのまま要件になっている
+水中の単細胞</description></item><item><title>このサイトについて</title><link>https://mitsuyoshi-yamazaki.github.io/ja-jp/posts/2022-07-07-155059.470834/</link><pubDate>Thu, 07 Jul 2022 15:50:59 +0900</pubDate><guid>https://mitsuyoshi-yamazaki.github.io/ja-jp/posts/2022-07-07-155059.470834/</guid><description>自分の思索やらを記録しておきたいという要望が以前からあり、今までは物理のノートやTwitter, note, Zennや社内wikiなどに書いていましたが、
+データが手元に残らないため失われる可能性がある 一元管理できない 内容を機械処理（翻訳、言語解析等）にかけるのが面倒 relationalな内容をそのように管理/取り扱いすることができない という問題がありました。
+relationalな内容の管理とは、アイデアや思想はその周辺のアイデアとのつながりがあってこそ活きるので、人間の頭の中で起きているような連想を行える何者かのことです。
+要件 サイトのコンセプトが要件です
 なんでも書ける 書いたものはローカル/GitHubに残せる 書いたものを構造化できる 書いたものを後処理にかけられる 仕様 Git管理にする 静的HTMLをホスティングする 動的にする理由もないし… ホスティングはGitHub Pagesを利用 楽やねん ジェネレータはHugoを利用 なんでも良かったのだが、元コンテンツをMarkdownで記述できることと、GitHub Pagesが利用しているJekyllはGitHub Action上での変更容易性がなさそう&amp;amp;Ruby製なので中立のHugoにした ビルド&amp;amp;デプロイはGitHub Actionを利用 楽やねん relationalな内容の管理 どうしようね？ 実装・運用 静的HTML生成〜公開はHugoのドキュメンテーションが詳しく、おおよそ詰まらずにできた
 → Hugoを使用したGitHub Pages用の静的HTML生成
 relationalな内容の管理 実装を試みたことはある（BidirectionalEditor）がデータがない状態ではモチベーションが続かなかったので、まずコンテンツを拡充するのが当面の目標。
 各記事/記事中の用語に対してその説明/他の記事が紐づけられていて、ユーザー体験としては相互にリンクされたそれを自由に行き来できるというものになるはず。
 静的HTML + 手作業で行うこともおそらく可能なのでスモールスタートでやってみてもいい。
 本格的に機械的に行うなら毎ビルド時に総ざらいするよりDB入れたほうがいいが…とりま体験を先に作ってみましょう。
-その他 GitHub ActionでHugoのビルドに使用している peaceiris/actions-gh-pages@v3 はかなり用途が特定されている印象があるので複雑な処理を挟む場合は自前で書き直すかも</description></item><item><title>2022 07 07 15:04:04.782474</title><link>https://mitsuyoshi-yamazaki.github.io/ja-jp/posts/2022-07-07-150404.782474/</link><pubDate>Thu, 07 Jul 2022 15:04:04 +0900</pubDate><guid>https://mitsuyoshi-yamazaki.github.io/ja-jp/posts/2022-07-07-150404.782474/</guid><description>人工生命研究会#4でお勧めされた本
+その他 GitHub ActionでHugoのビルドに使用している peaceiris/actions-gh-pages@v3 はかなり用途が特定されている印象があるので複雑な処理を挟む場合は自前で書き直すかも 記事の体を成すものはですます調、それ以外は適当</description></item><item><title>2022 07 07 15:04:04.782474</title><link>https://mitsuyoshi-yamazaki.github.io/ja-jp/posts/2022-07-07-150404.782474/</link><pubDate>Thu, 07 Jul 2022 15:04:04 +0900</pubDate><guid>https://mitsuyoshi-yamazaki.github.io/ja-jp/posts/2022-07-07-150404.782474/</guid><description>人工生命研究会#4でお勧めされた本
 Rolf Pheifer 知能の原理 Niklas Luhmann 自己言及性について Humberto Maturana 知恵の樹 ウムベルトの本 身体化された心 精神と自然 肝心の勧められた理由を忘れた
 DDD関連でお勧めされた本
 エンタープライズアプリケーションアーキテクチャパターン みんな読んでるのは実践ドメイン駆動設計</description></item><item><title>Test</title><link>https://mitsuyoshi-yamazaki.github.io/ja-jp/posts/test/</link><pubDate>Tue, 05 Jul 2022 17:41:39 +0900</pubDate><guid>https://mitsuyoshi-yamazaki.github.io/ja-jp/posts/test/</guid><description>テスト記事</description></item></channel></rss>
