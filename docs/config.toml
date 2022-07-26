@@ -8,6 +8,7 @@ theme = "paper"
 
 googleAnalytics = "G-3EB73WSJ9K"
 
+staticDir = "static"
 
 # ---- Site Settings ---- #
 [menu]
@@ -87,6 +88,7 @@ defaultContentLanguage = "ja-jp"
     weight = 2
     title = "Mitsuyoshi's Manuscript"
     description = ""
+    staticDir1 = "static_en"
     [languages.en.params.homeInfoParams]
       title = "Mitsuyoshi's Manuscript"
       content = """
