@@ -28,6 +28,7 @@ staticDir = "static"
   [markup.goldmark]
     [markup.goldmark.renderer]
       hardWraps = true # 改行を改行と認識する
+      unsafe = true # 生HTMLの描画
 
 
 # ---- In Site Search ---- #
