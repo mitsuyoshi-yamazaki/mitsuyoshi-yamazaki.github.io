@@ -1,7 +1,6 @@
 # coding:utf-8
 
 import os
-import shutil
 import utilities
 from utilities import get_translated_filepath, log
 from translation import translate
