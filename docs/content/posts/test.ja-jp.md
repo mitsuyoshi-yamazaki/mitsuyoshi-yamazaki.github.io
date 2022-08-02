@@ -9,6 +9,8 @@ tags:
 
 テスト記事兼Hugoチートシート
 
+[Hugoを使用したGitHub Pages用の静的HTML生成 - Zenn](https://zenn.dev/mitsuyoshi/scraps/355eebf05d4f2f)
+
 ## Markdownコンテンツ
 ### Front Matter(トップのあれ
 - フォーマットはyml/toml/json
