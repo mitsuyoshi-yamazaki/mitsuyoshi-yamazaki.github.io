@@ -72,4 +72,6 @@ relationalな内容の管理 実装を試みたことはある（BidirectionalEd
 その他 GitHub ActionでHugoのビルドに使用している peaceiris/actions-gh-pages@v3 はかなり用途が特定されている印象があるので複雑な処理を挟む場合は自前で書き直すかも 記事の体を成すものはですます調、それ以外は適当</description></item><item><title>2022 07 07 15:04:04.782474</title><link>https://mitsuyoshi-yamazaki.github.io/ja-jp/posts/2022-07-07-150404.782474/</link><pubDate>Thu, 07 Jul 2022 15:04:04 +0900</pubDate><guid>https://mitsuyoshi-yamazaki.github.io/ja-jp/posts/2022-07-07-150404.782474/</guid><description>人工生命研究会#4でお勧めされた本
 Rolf Pheifer 知能の原理 Niklas Luhmann 自己言及性について Humberto Maturana 知恵の樹 ウムベルトの本 身体化された心 精神と自然 肝心の勧められた理由を忘れた
 DDD関連でお勧めされた本
-エンタープライズアプリケーションアーキテクチャパターン みんな読んでるのは実践ドメイン駆動設計</description></item><item><title>Test</title><link>https://mitsuyoshi-yamazaki.github.io/ja-jp/posts/test/</link><pubDate>Tue, 05 Jul 2022 17:41:39 +0900</pubDate><guid>https://mitsuyoshi-yamazaki.github.io/ja-jp/posts/test/</guid><description>テスト記事</description></item></channel></rss>
+エンタープライズアプリケーションアーキテクチャパターン みんな読んでるのは実践ドメイン駆動設計</description></item><item><title>Hugoチートシート</title><link>https://mitsuyoshi-yamazaki.github.io/ja-jp/posts/test/</link><pubDate>Tue, 05 Jul 2022 17:41:39 +0900</pubDate><guid>https://mitsuyoshi-yamazaki.github.io/ja-jp/posts/test/</guid><description>テスト記事兼Hugoチートシート
+Hugoを使用したGitHub Pages用の静的HTML生成 - Zenn
+Markdownコンテンツ Front Matter(トップのあれ フォーマットはyml/toml/json https://gohugo.io/content-management/front-matter/ title: &amp;#34;Hugoチートシート&amp;#34; date: 2022-07-05T17:41:39+09:00 draft: false tags: - test - hugo</description></item></channel></rss>
