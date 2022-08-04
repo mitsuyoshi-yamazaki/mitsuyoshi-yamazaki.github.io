@@ -85,4 +85,7 @@ Rolf Pheifer 知能の原理 Niklas Luhmann 自己言及性について Humberto
 DDD関連でお勧めされた本
 エンタープライズアプリケーションアーキテクチャパターン みんな読んでるのは実践ドメイン駆動設計</description></item><item><title>Hugoチートシート</title><link>https://mitsuyoshi-yamazaki.github.io/ja-jp/posts/test/</link><pubDate>Tue, 05 Jul 2022 17:41:39 +0900</pubDate><guid>https://mitsuyoshi-yamazaki.github.io/ja-jp/posts/test/</guid><description>テスト記事兼Hugoチートシート
 Hugoを使用したGitHub Pages用の静的HTML生成 - Zenn
-Markdownコンテンツ Front Matter(トップのあれ フォーマットはyml/toml/json https://gohugo.io/content-management/front-matter/ title: &amp;#34;Hugoチートシート&amp;#34; date: 2022-07-05T17:41:39+09:00 draft: false tags: - test - hugo</description></item></channel></rss>
+サイト内リンク サイト内リンクを貼ろう - なかけんのHugoノート
+生成後のHTMLファイルへのパスではなく、生成前のMarkdownのパスを指定すると生成時に変換してくれるらしい。
+便利ですね
+Markdownコンテンツ Front Matter(トップのあれ フォーマットはyml/toml/json https://gohugo.io/content-management/front-matter/ title: &amp;#34;Hugoチートシート&amp;#34; date: 2022-07-05T17:41:39+09:00 draft: false tags: - programming - hugo</description></item></channel></rss>
