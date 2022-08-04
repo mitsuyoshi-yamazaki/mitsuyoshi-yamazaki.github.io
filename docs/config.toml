@@ -16,11 +16,14 @@ staticDir = "static"
     name = "検索"
     url = "search/"
     weight = 10
-  [[menu.posts]]  # FixMe: このメニューどこにある？
-    identifier = "posts"
-    name = "Posts"
+  [[menu.main]]
+    name = "投稿一覧"
     url = "posts/"
-    weight = 10
+    weight = 20
+  [[menu.main]]
+    name = "タグ"
+    url = "tags/"
+    weight = 30
 
 
 # ---- Markup ---- #
@@ -110,8 +113,11 @@ What I made:
         name = "Search"
         url = "search/"
         weight = 10
-      [[languages.en.menu.posts]]
-        identifier = "posts"
+      [[languages.en.menu.main]]
         name = "Posts"
         url = "posts/"
-        weight = 10
+        weight = 20
+      [[languages.en.menu.main]]
+        name = "Tags"
+        url = "tags/"
+        weight = 30
