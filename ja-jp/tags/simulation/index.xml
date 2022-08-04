@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>simulation on みつよし手稿</title><link>https://mitsuyoshi-yamazaki.github.io/ja-jp/tags/simulation/</link><description>Recent content in simulation on みつよし手稿</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Sat, 30 Jul 2022 17:47:03 +0900</lastBuildDate><atom:link href="https://mitsuyoshi-yamazaki.github.io/ja-jp/tags/simulation/index.xml" rel="self" type="application/rss+xml"/><item><title>MembraneAutomata</title><link>https://mitsuyoshi-yamazaki.github.io/ja-jp/posts/2022-07-30-174703.671472/</link><pubDate>Sat, 30 Jul 2022 17:47:03 +0900</pubDate><guid>https://mitsuyoshi-yamazaki.github.io/ja-jp/posts/2022-07-30-174703.671472/</guid><description>これは学生の頃、連休中に思い立って書き上げたMacアプリケーションです。
+10年以上前の実装にも関わらず現行マシンで問題なくコンパイルできました。実装言語のObjective-CとCに大きな更新がなかったためかな？
+当時はパターンが収束してしまうことがわかり触るのをやめてしまったのですが、モデルの筋はいい気がするのでパラメータを変えて自動探索にかけたらなにか生まれそうな気がします。
+概要 生命現象の土台となる恒常性をもつパターンが現れうる系を作成しました。今回はモデルと計算の簡便さから、系の基本構造にはセルオートマトンを採用しました。セルオートマトンはConway&amp;rsquo;s Game of Life[^1]に代表されるように、単純なモデルを比較的少ない計算量で実行できる便利な計算モデルです。しかしパターンの恒常性の観点から考えると、ひとつのセルの状態が反転しただけで崩壊するような不安定なモデルに恒常性をもたせるのは困難です。MembraneAutomataでは近傍半径を増やす[^2]ことで頑強なパターン構築を可能にしました。そしてMNCAの上で、恒常性のある領域を外界から隔離するために、泡状の構造が生成される簡易化学モデルを実装しました。
+^1: Conway&amp;rsquo;s Game of Life - Wikipedia
+^2: Multiple Neighbourhood Cellular Automata (MNCA)と呼ばれる。Understanding Multiple Neighbourhood Cellular Automata
+Motivation of Current Work 私は生命のもつ予測不能性を再現するというテーマを研究しており、この作品はそのテーマのうえで、恒常性の創発に主眼を置いて作ったものです。予測不能性という制約のもとで設計するためには、実現したい現象（ここでは恒常性）を直接実装するのではなく、下位の現象を実装することを介して、実現したい上位の現象を創発する、という手法をとる必要があります。本作ではセルオートマトンの状態遷移ルールを適切に設定することによりそれを実現しました。
+要件 系の要件 a. 比較的単純かつ小規模な計算で実現できること b. 現れるパターンがConway&amp;rsquo;s Game of Lifeより安定していること a.モデルの単純さと計算しやすさの要件からセルオートマトンを選択し、b.パターン安定の要件から近傍半径を増やして近傍セルひとつあたりのパターンへの影響度を小さくすることにしました。
+セルオートマトンのルール要件 c. 恒常性をもつパターンが発生しうること c1. 系全体では、自然な行いに任せていると秩序が失われること（現実世界でのエントロピーの増大則と同等の仕組み） c2. そのような系のなかで、外界に影響されない区画が存在すること c21. その区画の境界部分が外界の影響を打ち消し、内部に伝えない役割を果たすこと 現実の現象を参考にこれらの要件を満たすルールを考えると、水中の油滴、あるいは泡を抽象化することで理解しやすいモデルを作れそうに思えます。泡状のパターンの境界付近で外界の影響を打ち消し、内部に恒常性をつくる、という構造です。
+実装仕様 実装: MembraneAutomata - GitHub
+MNCAの実装 MembraneAutomataで実装するMNCAは近傍半径を2以上に拡張したものです。自セルの次の状態に影響する近傍セル数 n 近傍半径を r と置いたとき
+n = (r * (r + 1)) * 4</description></item></channel></rss>
