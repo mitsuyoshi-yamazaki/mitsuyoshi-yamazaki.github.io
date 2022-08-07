@@ -10,7 +10,7 @@ markdown_ignore_lines = [
   "---",
 ]
 
-hugo_control_header_pattern = "^\n*---\n(\n|.)*?\n---\n"
+hugo_front_matter_pattern = "(^\n*---\n(\n|.)*?\n---\n|^\n*\+\+\+\n(\n|.)*?\n\+\+\+\n)"
 
 # 前方からチェックされるため-,#など他のパターンに含まれるパターンは後ろに置く
 markdown_prefix_pattern = "^(>|\s*(#####|####|###|##|#|- \[ \]|- \[x\]|-|\d+\.))"
@@ -39,17 +39,17 @@ class MarkdownLine:
     return
 
 class MarkdownParser:
-  hugo_control_header: Optional[str]
+  hugo_front_matter: Optional[str]
   lines: Collection[MarkdownLine]
 
   def __init__(self, contents: str):
     def split_contents() -> Tuple[Optional[str], str]:
-      hugo_control_header_match = re.search(hugo_control_header_pattern, contents)
-      if hugo_control_header_match is None:
+      hugo_front_matter_match = re.search(hugo_front_matter_pattern, contents)
+      if hugo_front_matter_match is None:
         log("Hugo control header not found")
         return (None, contents)
       
-      header = hugo_control_header_match.group()
+      header = hugo_front_matter_match.group()
       log("Hugo control header found:\n{}".format(header))
       return (
         header,
@@ -57,7 +57,7 @@ class MarkdownParser:
       )
 
     parsed = split_contents()
-    self.hugo_control_header = parsed[0]
+    self.hugo_front_matter = parsed[0]
     self.lines = [MarkdownLine(line) for line in parsed[1].split("\n")]
     for line in self.lines:
       log("--")
@@ -97,8 +97,8 @@ def translate(contents: str, language: Language) -> str:
 
   translated_contents = [
   ]
-  if markdown_parser.hugo_control_header is not None:
-    translated_contents.append(markdown_parser.hugo_control_header)
+  if markdown_parser.hugo_front_matter is not None:
+    translated_contents.append(markdown_parser.hugo_front_matter)
   if translator.translating_comment is not None:
     translated_contents.append(translator.translating_comment)
   translated_contents.extend([line.prefix + translator.translate(line.content) for line in markdown_parser.lines])
