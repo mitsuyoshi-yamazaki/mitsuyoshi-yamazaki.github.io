@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>conference on みつよし手稿</title><link>https://mitsuyoshi-yamazaki.github.io/ja-jp/tags/conference/</link><description>Recent content in conference on みつよし手稿</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Thu, 21 Jul 2022 22:59:49 +0900</lastBuildDate><atom:link href="https://mitsuyoshi-yamazaki.github.io/ja-jp/tags/conference/index.xml" rel="self" type="application/rss+xml"/><item><title>ALIFE2022 Day4</title><link>https://mitsuyoshi-yamazaki.github.io/ja-jp/posts/2022-07-21-225949.235000/</link><pubDate>Thu, 21 Jul 2022 22:59:49 +0900</pubDate><guid>https://mitsuyoshi-yamazaki.github.io/ja-jp/posts/2022-07-21-225949.235000/</guid><description>疲れたので適当に流していたがこの発表はおもしろかった
+細胞のモデルの、同期的並列的に動作する部分と逐次直列で動作する部分をうまく分離してそれぞれ適した実装をしたという発表　String: a programming language for the evolution of ribozymes in a new computational protocell model Proceeding: https://direct.mit.edu/isal/proceedings/isal/54/112248
+細胞の基本的な機能は遺伝子、代謝ネットワーク、細胞膜から成り、これをモデル化したミニマムなProtoCell Modelを生成したという研究
+面白いのは&amp;rsquo;RNA&amp;rsquo;がコードする&amp;rsquo;タンパク質&amp;rsquo;が短いプログラミングコードになっており（タイトルに入っているString言語: 言語仕様はProceedingにある）、それがなんやかや実行されて周囲に作用をするというつくりになっているところ。
+エンコードされているので組み替えも突然変異もできる。Proceedingには設計した&amp;rsquo;タンパク質&amp;rsquo;と進化後それぞれのコードが載っている。</description></item><item><title>ALIFE2022 Day3</title><link>https://mitsuyoshi-yamazaki.github.io/ja-jp/posts/2022-07-20-160351.239259/</link><pubDate>Wed, 20 Jul 2022 16:03:51 +0900</pubDate><guid>https://mitsuyoshi-yamazaki.github.io/ja-jp/posts/2022-07-20-160351.239259/</guid><description>英語聴きすぎてよくわからなくなってきた
+参加費にお菓子代が入ってれば経費なのに…
+Chemically fueled droplets; towards the synthesis of life ボトムアップで生命の理解を深める
+生命の要素
+Self-sustaining: 熱的平衡状態を保つ Compartment: ダーウィン進化: 自己複製と突然変異 self-sustaining compartmentをつくる
+エネルギーを取り込んでごみを排出する →化学サイクルを設計する Growing Isotropic Neural Cellular Automata growing neural CA + self organizing texture
+GNCAの問題点：
+anisotropy（異方性）があること：回転させると壊れる</description></item><item><title>ALIFE2022 Day2</title><link>https://mitsuyoshi-yamazaki.github.io/ja-jp/posts/2022-07-19-171558.333498/</link><pubDate>Tue, 19 Jul 2022 17:15:58 +0900</pubDate><guid>https://mitsuyoshi-yamazaki.github.io/ja-jp/posts/2022-07-19-171558.333498/</guid><description>アブストの載っているプログラムを翻訳したのち聞くようにしたら多少わかるようになった…か？わからん
+オーストラリアのソフトウェアエンジニアの参加者に、Tierraで個体長を大きくする淘汰圧はどう実装するかやオートエンコーダで創発が検出できるのではといった話を聞いた。聞き返せると6割くらいはわかる
+Empathic Active Inference: Active Inference with Empathy Mechanism for Socially Behaved Artificial Agent 共感の認知機能を実装することでエージェントに利他的なふるまいをさせることを可能にしたという発表
+そのようなエージェントも利己的な集団に突っ込むと利己的にふるまうようなので、単に他者の利益を評価してそのようにふるまっているわけではない
+Voluntary safety pledges overcome over-regulation dilemma in AI development: an evolutionary game analysis エージェントの行動を直接的に制限するのではなく、制約を設けることにより自発的にある行動を抑制するような仕組みを作ったという発表
+Simulations of Vesicular Distanglement 細胞の小胞体間の接続をどのように切り離すかシミュレーションで研究したという発表
+時間になっても発表者が現れなかったため昼休みになった。自由かよ
+泡状の物体をどう分裂させるかという話なのだったら気になっていたので後で見直したい
+泡のような形状を自律的につくる系をつくるのは簡単で、互いに接続しつつ体積あたりの表面積が最小になるような制約をかければすぐできる。
+一方でこれを分裂させようとするのはその制約に反するため難しい。
+より大きな制約をつくって、「今までの制約は大きな制約のひとつの側面でしかないんですよ、こういう条件では制約が緩くなりますよ」ということにするか、別の仕組みを導入して力技でなんとかするか、現実の生命はどうやっているんだろうね？
+Evolving Unbounded Neural Complexity in Pursuit-Evasion Games 共進化で個体の複雑さは増加する
+prior workに出ていた言語推測ゲームって立命館大学の谷口先生かな？
+Firefly-inspired vocabulary generator for communication in multi-agent systems 蛍が群れていると自分の点滅パターンが大勢に埋もれてしまい相手に届かないため、埋もれないような点滅パターンをどのように生成するかという発表
+Alternative Comfortの研究と似てるかな
+その他に気になった発表 Testing the Efficiency of a Genome-Wide Association Study on a Computational Evolutionary Model 手法として取り入れたALifeモデルが面白そうだった</description></item><item><title>ALIFE2022 Day1</title><link>https://mitsuyoshi-yamazaki.github.io/ja-jp/posts/2022-07-18-193111.491634/</link><pubDate>Mon, 18 Jul 2022 19:31:11 +0900</pubDate><guid>https://mitsuyoshi-yamazaki.github.io/ja-jp/posts/2022-07-18-193111.491634/</guid><description>今年はイタリアなのでCESTで時差は7時間
+全て英語なので事前にアブストを読んで話の流れを掴んでおかないとだいたいわからない
+The evolution of adaptive phenotypic plasticity stabilizes populations against environmental fluctuations Phenotypic plasticity:
+which is the capacity for a single genotype to produce alternate phenotypes depending on environmental conditions.
+Adoptive phenotypic plasticity: 〜が個体の生存に有利であること
+digital organism(Avida)でモデルを検証
+餌（reword）と毒(punish)をもつ環境　餌と毒が逆のふたつの環境を用意し、その環境を交互に切り替える
+みっつの実験
+plastic 環境の変化を検出できる non-plastic 環境の変化を検出できない static 環境の変化がない（全て餌 non-plasticのみ突然変異率と表現型の変化率が桁幾つというレベルで高かった
+Evolving Programmable Computational Metamaterials ファジーな論理ゲートを生成するみたいなモデルが面白かった
+粒子の運動がどのように伝播するか、入力の粒子と出力の粒子を用意して入力粒子を動かして出力の粒子の動きを出力として扱う
+その他に気になった発表 Is Prediction Required? Using Evolutionary Robotics to Investigate How Systems Cope with Self-Caused Stimuli Dirty Transmission Hypothesis: Increased Mutations During Horizontal Transmission Can Select for Increased Levels of Mutualism in Endosymbionts Finding Chemical Organisations in Matter-Conserving AChems</description></item></channel></rss>
