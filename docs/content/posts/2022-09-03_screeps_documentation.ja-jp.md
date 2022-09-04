@@ -71,7 +71,7 @@ Roomの外に広がるゲーム世界の説明です。
 ![](/images/screeps_documentation_001.png)
 
 ### Shard
-- 10 x 10程度のSectorで構成される
+- 12 x 12程度のSectorで構成される
 - shard0, shard1, shard2, shard3の4つのshardがあり、それぞれ独立して実行されるためtick速度が異なる
 - shard3のみCPUに上限がかかっているため、CPU unlockの課金の有無に関わらず、全員平等なCPU量でプレイができる
 
