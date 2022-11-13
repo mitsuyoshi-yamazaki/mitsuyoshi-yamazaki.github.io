@@ -1,7 +1,7 @@
 ---
 title: "春暮一康「モータルゲーム」"
 date: 2022-11-13T15:06:17+09:00
-draft: true
+draft: false
 tags:
 - cellular_automata
 - book
