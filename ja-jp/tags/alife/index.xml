@@ -1,4 +1,17 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>alife on みつよし手稿</title><link>https://mitsuyoshi-yamazaki.github.io/ja-jp/tags/alife/</link><description>Recent content in alife on みつよし手稿</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Sat, 30 Jul 2022 17:47:03 +0900</lastBuildDate><atom:link href="https://mitsuyoshi-yamazaki.github.io/ja-jp/tags/alife/index.xml" rel="self" type="application/rss+xml"/><item><title>MembraneAutomata</title><link>https://mitsuyoshi-yamazaki.github.io/ja-jp/posts/2022-07-30-174703.671472/</link><pubDate>Sat, 30 Jul 2022 17:47:03 +0900</pubDate><guid>https://mitsuyoshi-yamazaki.github.io/ja-jp/posts/2022-07-30-174703.671472/</guid><description>これは学生の頃、連休中に思い立って書き上げたMacアプリケーションです。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>alife on みつよし手稿</title><link>https://mitsuyoshi-yamazaki.github.io/ja-jp/tags/alife/</link><description>Recent content in alife on みつよし手稿</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Sun, 13 Nov 2022 15:06:17 +0900</lastBuildDate><atom:link href="https://mitsuyoshi-yamazaki.github.io/ja-jp/tags/alife/index.xml" rel="self" type="application/rss+xml"/><item><title>春暮一康「モータルゲーム」</title><link>https://mitsuyoshi-yamazaki.github.io/ja-jp/posts/2022-11-13_book_motal_game/</link><pubDate>Sun, 13 Nov 2022 15:06:17 +0900</pubDate><guid>https://mitsuyoshi-yamazaki.github.io/ja-jp/posts/2022-11-13_book_motal_game/</guid><description>SFマガジン2022年8月号収録
+春暮 康一「モータルゲーム」
+恒星間生命探索プロジェクトが有機的なセルオートマトンを発見した。そのルールは決定論的で、近い将来全ての&amp;quot;セル&amp;quot;が消滅することが計算によって明らかになる。
+セルオートマトンを環境から自発した自己複製子と見なせば生命的だが、一方で決定論的にふるまいを計算できる現象は生命とは扱い難い。
+オートマトンの自然環境を乱さないために手を触れず&amp;quot;絶滅&amp;quot;するに任せるべきか、それとも&amp;quot;品種改良&amp;quot;を行い長周期のパターンを育めるルールに改変すべきか。
+探査チームの出した結論は…
+この物語は人間が未知の現象を求めて異星に旅立ち、まさにその目的に叶う現象を発見し、そしてその既存の学問の枠組みで捉えられない物事を人間がどのように扱うかを描いた物語です。
+有機的オートマトンが自然発生することは、生命が自然発生したことを考えれば十分にあり得るシナリオであり、そのような準生命体の生命性についてはまさに人工生命分野で議論されているところですね。
+決定論的にふるまいが決定できる現象を生命と呼べるだろうか？
+それが生命であるのであれば、その現象を電子的にシミュレートしたパターンも生命と呼びうるだろうか？
+どのような手段でも生き延び、自らの滅びに抗う存在を生命と呼ぶのではないか？
+しかしこの物語の焦点は異星のセルオートマトンではなく、その生命性の議論でもなく、未知の物事に対する人間の想像力と創造性の発露です。
+決定論的な系に非決定論的な要素を導入する、という結論は、まさにOpen-Endedな系を目指す人工生命制作のひとつの方向性でもあります。
+この物語がどのような結末に至るのかその目で確かめてください。</description></item><item><title>MembraneAutomata</title><link>https://mitsuyoshi-yamazaki.github.io/ja-jp/posts/2022-07-30-174703.671472/</link><pubDate>Sat, 30 Jul 2022 17:47:03 +0900</pubDate><guid>https://mitsuyoshi-yamazaki.github.io/ja-jp/posts/2022-07-30-174703.671472/</guid><description>これは学生の頃、連休中に思い立って書き上げたMacアプリケーションです。
 10年以上前の実装にも関わらず現行マシンで問題なくコンパイルできました。実装言語のObjective-CとCに大きな更新がなかったためかな？
 当時はパターンが収束してしまうことがわかり触るのをやめてしまったのですが、モデルの筋はいい気がするのでパラメータを変えて自動探索にかけたらなにか生まれそうな気がします。
 概要 生命現象の土台となる恒常性をもつパターンが現れうる系を作成しました。今回はモデルと計算の簡便さから、系の基本構造にはセルオートマトンを採用しました。セルオートマトンはConway&amp;rsquo;s Game of Life[^1]に代表されるように、単純なモデルを比較的少ない計算量で実行できる便利な計算モデルです。しかしパターンの恒常性の観点から考えると、ひとつのセルの状態が反転しただけで崩壊するような不安定なモデルに恒常性をもたせるのは困難です。MembraneAutomataでは近傍半径を増やす[^2]ことで頑強なパターン構築を可能にしました。そしてMNCAの上で、恒常性のある領域を外界から隔離するために、泡状の構造が生成される簡易化学モデルを実装しました。
