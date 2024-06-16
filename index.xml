@@ -1,6 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Mitsuyoshi's Manuscript</title><link>https://mitsuyoshi-yamazaki.github.io/</link><description>Recent content on Mitsuyoshi's Manuscript</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Tue, 21 Feb 2023 09:06:16 +0900</lastBuildDate><atom:link href="https://mitsuyoshi-yamazaki.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>2023-02-21_alife_workshop06</title><link>https://mitsuyoshi-yamazaki.github.io/posts/2023-02-21_alife_workshop06/</link><pubDate>Tue, 21 Feb 2023 09:06:16 +0900</pubDate><guid>https://mitsuyoshi-yamazaki.github.io/posts/2023-02-21_alife_workshop06/</guid><description>This article is automatically generated from the original content
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Mitsuyoshi's Manuscript</title><link>https://mitsuyoshi-yamazaki.github.io/</link><description>Recent content on Mitsuyoshi's Manuscript</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 21 Feb 2023 09:06:16 +0900</lastBuildDate><atom:link href="https://mitsuyoshi-yamazaki.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>第6回人工生命研究会</title><link>https://mitsuyoshi-yamazaki.github.io/posts/2023-02-21_alife_workshop06/</link><pubDate>Tue, 21 Feb 2023 09:06:16 +0900</pubDate><guid>https://mitsuyoshi-yamazaki.github.io/posts/2023-02-21_alife_workshop06/</guid><description>This article is automatically generated from the original content
 第6回人工生命研究会
-Evolving soft robots in neighboring environments &amp;ldquo;neighbourhood model&amp;rdquo; 共通祖先からさまざまなニッチに適応したフィンチ グリッド状に異なる環境を並べて、進化計算をする際に近隣のグリッドのエージェントを一定混ぜて一緒に評価する つまり、ニッチな環境に特化した形質に対して全く異なる環境に適用したエージェントを競争相手に入れる エージェントの混合は隣り合ったグリッド間でしか起きないので、ある形質が広がるかどうかにはグリッドの配置が影響する このモデルの特色 大きな空間的広がりを使わずに、同等の効果を得られる 進化的アルゴリズムにかける形質は、それ自体が移動できなくても良い ピクセル単位で年齢推定するニューラルセルオートマトンの考案 Neural CAと同じアーキテクチャを使用 ピクセル単位で推定が行われるため画像の欠けなどに対してロバスト 学習させると、与えられた顔画像の各部分（目元、口元など）に対してそれぞれ異なる年齢が推定されて、その後計算を進めるにつれてどれかが優勢になり全体に広がる 異なる推定年齢が衝突した際にどちらが優勢になるのか、そのプロセスはまだわかっていない EvoJAX Tutorial We will also have a hands-on tutorial from Bert Chan, Yujin Tang and Yingtao Tian from Google Brain about EvoJax. EvoJax is a NeuroEvolution ToolKit improved by hardware acceleration technologies, that is also used for evolutionary computation and alife simulations.</description></item><item><title>質量保存セルオートマトンの実装</title><link>https://mitsuyoshi-yamazaki.github.io/posts/2022-11-27_mass_conservation_ca/</link><pubDate>Sun, 27 Nov 2022 15:02:21 +0900</pubDate><guid>https://mitsuyoshi-yamazaki.github.io/posts/2022-11-27_mass_conservation_ca/</guid><description>This article is automatically generated from the original content
+人工生命研究会の6回目はリアルとオンラインのハイブリッドで、リアル会場はつくば駅前のco-enスペースで行われました。
+Evolving soft robots in neighboring environments 提案するNeighbourhood Modelという手法が面白かったです。
+これは共通祖先からさまざまな環境ニッチに適応したフィンチのように、人工生命のエージェントがどのように環境に適応するか・適応した形態がどのように近隣の環境に進出するかを観察できるモデルです。
+このモデルの骨子は通常の遺伝的アルゴリズムです。
+一般的な遺伝的アルゴリズムと異なるのは、異なる環境をグリッド状に並べて、遺伝的アルゴリズムによる個体評価をする際に、近隣のグリッドのエージェントを一定数混ぜて一緒に評価するという部分です。
+それにより、近隣に異なる環境がある場合はひとつの形態の独占状態が生まれにくく、逆に近隣に同質の環境が多い場合はひとつの形態が多くのグリッドを寡占するという状態が生まれます。
+面白いのは、エージェントの混合は隣り合ったグリッド間でしか起きないので、ある形質が広がるかどうかにはグリッドの配置が影響するという点です。
+発表では適応困難な環境をロの字型に配置することにより、外側の環境に対して適応して複数のグリッドに広がった形質が、ブロックしているロの字部分を越えられずに中央グリッドに進出できない様子がありました（↓ 赤枠部分が同種の支配種）
+このモデルの特色としては、
+大きな空間的広がりを使わずに、同等の効果を得られる 遺伝的アルゴリズムにかける内容は、それ自体が移動できなくても良い という部分になると思います。
+特にエージェントそれ自体に移動能力がなくとも&amp;quot;移動&amp;quot;による影響を導入できるのは応用範囲を広くしてとても面白いですね。
+ピクセル単位で年齢推定するニューラルセルオートマトンの考案 Neural CAと同じアーキテクチャを使用 ピクセル単位で推定が行われるため画像の欠けなどに対してロバスト 学習させると、与えられた顔画像の各部分（目元、口元など）に対してそれぞれ異なる年齢が推定されて、その後計算を進めるにつれてどれかが優勢になり全体に広がる 異なる推定年齢が衝突した際にどちらが優勢になるのか、そのプロセスはまだわかっていない EvoJAX Tutorial EvoJAXはPythonで書いた計算をJust In Time CompilerでCUDA実行形式に自動で直し、CPU/GPU/TPUで計算してくれるフレームワークです。
+コードを適合させるための制約は副作用のない純粋関数にすることだけで、GPU利用の計算をとても簡単に書けるらしい。
+We will also have a hands-on tutorial from Bert Chan, Yujin Tang and Yingtao Tian from Google Brain about EvoJax. EvoJax is a NeuroEvolution ToolKit improved by hardware acceleration technologies, that is also used for evolutionary computation and alife simulations.</description></item><item><title>質量保存セルオートマトンの実装</title><link>https://mitsuyoshi-yamazaki.github.io/posts/2022-11-27_mass_conservation_ca/</link><pubDate>Sun, 27 Nov 2022 15:02:21 +0900</pubDate><guid>https://mitsuyoshi-yamazaki.github.io/posts/2022-11-27_mass_conservation_ca/</guid><description>This article is automatically generated from the original content
 セルオートマトン上で全体の量が保存されるような物理量を扱うにはどのような実装を行えば良いでしょうか。
 セルオートマトンの系に存在するのはそれぞれのセルの状態のみであり、現実世界における&amp;quot;質量&amp;quot;のような、増減しない物理量というものは本来存在しません。
 この性質のために、セルオートマトンのパターンはほんの小さな種から無限に大きく育つことができますが、一方で「増減しない」という制約の不在により、現実世界では当たり前に存在する現象を作りにくい部分があります。
@@ -100,7 +113,7 @@ Multilingualization on Hugo Hugo automatically publishes multilingual sites by p
 論文 Where did the pupa come from? The timing of juvenile hormone signalling supports homology between stages of hemimetabolous and holometabolous insects https://royalsocietypublishing.org/doi/full/10.1098/rstb.2019.0064
 定期的に話題に上る「蛹の起源」について。
 ２大学説（「蛹＝終齢幼虫」vs「蛹＝全幼虫齢」）についてレビューし、変態制御遺伝子群の機能からも検討。
-https://twitter.com/Cyclommatism/status/1545369213212463105?s=20&amp;amp;t=SkllRtNcehkcRyMvwd1GyA
+https://twitter.com/Cyclommatism/status/1545369213212463105?s=20&amp;t=SkllRtNcehkcRyMvwd1GyA
 Weight Agnostic Neural Networks Neural netの接続トポロジーのみを進化的計算で求め、学習（結合荷重の最適化）を省略することで高速に計算する手法
 https://weightagnostic.github.io
 われわれががんばって学習させていたのは一体…？
